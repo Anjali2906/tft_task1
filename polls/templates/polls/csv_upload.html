@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<p>
+		<label for="id_csvname">Name of csv</label>
+		<input id="id_csvname" type="text" maxlength="200" name="name_of">
+	</p>
+	
+	<p>
+		<button type="submit">Next</button>
+	<p>
+  </form>
+
+{% endblock %}

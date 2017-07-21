@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<p>
+		<input type="file" name="myfiles" >
+		
+		<label for="id_des">Description</label>
+		<input id="id_des" type="text" maxlength="200" name="description">
+	</p>
+	<input type="button" value="Add More" id="add_more">
+	
+	<p>
+		<button type="submit">{% trans "Save" %}</button>
+	<p>
+  </form>
+
+{% endblock %}
